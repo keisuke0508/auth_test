@@ -26,8 +26,10 @@ def get():
 
 @app.route("/", methods=["POST"])
 def facebooktest():
-    token = request.form.get("foken")
+    token = request.args.get("token")
+    open_id_type = request.args.get("open_id_type")
     print token
+    print open_id_type
     return render_template(
         "index.html",
         static_file_version=STATIC_FILE_VERSION,
@@ -41,8 +43,10 @@ def facebooktest():
 def linetest():
     code = request.args.get("code")
     state = request.args.get("state")
+    open_id_type = request.args.get("open_id_type")
     print code
     print state == LINE_STATE
+    print open_id_type
     return render_template(
         "index.html",
         static_file_version=STATIC_FILE_VERSION,

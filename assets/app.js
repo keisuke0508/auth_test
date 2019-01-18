@@ -1,5 +1,3 @@
-import FacebookAuth from "./js/facebook_auth";
-import LineAuth from "./js/line_auth";
+import SignIn from "./js/signin";
 
-let facebookAuth = new FacebookAuth();
-let lineAuth = new LineAuth();
+let signIn = new SignIn();
