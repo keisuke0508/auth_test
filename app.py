@@ -7,8 +7,8 @@ import json
 app = Flask(__name__)
 app.secret_key = os.urandom(24)
 
-FACEBOOK_APP_ID = ""
-LINE_CHANNEL_ID = ""
+FACEBOOK_APP_ID = "1004022183136902"
+LINE_CHANNEL_ID = "1617118616"
 LINE_STATE = "12345abcde"
 
 STATIC_FILE_VERSION = json.load(open("static_file_version.json", "r")).get("version")
